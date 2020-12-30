@@ -1311,7 +1311,7 @@ end
 --- 1. Generate 8 matrices with different masks and calculate the penalty
 --- 1. Return qrcode with least penalty
 -- If ec_level or mode is given, use the ones for generating the qrcode. (mode is not implemented yet)
-local function qrcode( str, ec_level, mode )
+function qrcode( str, ec_level, mode )
 	local arranged_data, version, data_raw, mode, len_bitstring
 	version, ec_level, data_raw, mode, len_bitstring = get_version_eclevel_mode_bistringlength(str,ec_level)
 	data_raw = data_raw .. len_bitstring
